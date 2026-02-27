@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Glass Aplikasi</title>
+
+<style>
+
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #9bb8ff, #dfe7ff, #ffffff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* =============== MAIN CARD GLASS =============== */
+
+#toggleMain {
+    display: none;
+}
+
+.glass-card {
+    width: 520px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.4);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    cursor: pointer;
+    transition: .3s;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.glass-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+}
+
+.glass-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255,255,255,0.35);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: #1f4c86;
+    backdrop-filter: blur(4px);
+}
+
+.glass-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1f4c86;
+}
+
+.glass-desc {
+    font-size: 14px;
+    color: #333;
+}
+
+/* =============== PANEL GLASS LIST =============== */
+
+.panel {
+    width: 520px;
+    margin-top: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.23);
+    border: 1px solid rgba(255,255,255,0.4);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .55s ease;
+}
+
+#toggleMain:checked ~ .panel {
+    max-height: 2000px;
+}
+
+/* =============== ITEM APLIKASI (GLASS) =============== */
+
+.app-item {
+    padding: 22px 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.35);
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.app-item:last-child {
+    border-bottom: none;
+}
+
+.app-icon {
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.35);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #1f4c86;
+    backdrop-filter: blur(5px);
+}
+
+.app-info-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #1f4c86;
+}
+
+.app-info-desc {
+    font-size: 14px;
+    margin-top: 4px;
+    color: #333;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===================== MAIN CARD ===================== -->
+<input type="checkbox" id="toggleMain">
+
+<label for="toggleMain" class="glass-card">
+    <div class="glass-icon">📦</div>
+    <div>
+        <div class="glass-title">Layanan Aplikasi Kampus</div>
+        <div class="glass-desc">Klik untuk melihat semua aplikasi dan deskripsi lengkap.</div>
+    </div>
+</label>
+
+<!-- ===================== PANEL ===================== -->
+<div class="panel">
+
+    <div class="app-item">
+        <div class="app-icon">🖥️</div>
+        <div>
+            <div class="app-info-title">SMURT</div>
+            <div class="app-info-desc">Sistem monitoring berbasis web untuk administrasi kampus.</div>
+        </div>
+    </div>
+
+    <div class="app-item">
+        <div class="app-icon">📑</div>
+        <div>
+            <div class="app-info-title">PTSP</div>
+            <div class="app-info-desc">Layanan administrasi terpadu satu pintu.</div>
+        </div>
+    </div>
+
+    <div class="app-item">
+        <div class="app-icon">🎓</div>
+        <div>
+            <div class="app-info-title">SIKADU</div>
+            <div class="app-info-desc">Sistem akademik lengkap untuk mahasiswa dan dosen.</div>
+        </div>
+    </div>
+
+    <div class="app-item">
+        <div class="app-icon">📊</div>
+        <div>
+            <div class="app-info-title">Tracer Study</div>
+            <div class="app-info-desc">Pelacakan alumni untuk mengetahui hasil lulusan.</div>
+        </div>
+    </div>
+
+    <div class="app-item">
+        <div class="app-icon">📚</div>
+        <div>
+            <div class="app-info-title">SINTA</div>
+            <div class="app-info-desc">Sistem informasi indeks penelitian & publikasi dosen.</div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+
