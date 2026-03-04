@@ -46,7 +46,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-  background: url('/background.jpg') center/cover no-repeat;
+  background: url('background.jpg') center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 120px 40px;
@@ -196,3 +196,4 @@ footer {
   transform: translateY(-8px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
+
